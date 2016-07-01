@@ -16,8 +16,6 @@ namespace PagarMePoCs.Net
 
             Assembly a = Assembly.GetExecutingAssembly();
             string typeName = a.GetName().Name + ".Entities." + PoCName;
-            Type frm = a.GetType(typeName);
-
             objPoc = (IPoC) a.CreateInstance(typeName, true);
 
             return objPoc;

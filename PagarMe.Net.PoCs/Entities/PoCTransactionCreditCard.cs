@@ -52,7 +52,11 @@ namespace PagarMePoCs.Net.Entities
                             Number = "12345678"
                         }
                     },
-                    PostbackUrl = "http://www.aledsz.com.br/validateRequest.php"
+                    PostbackUrl = "http://www.aledsz.com.br/validateRequest.php",
+					Metadata = new AbstractModel(PagarMeService.GetDefaultService())
+					{
+						["idProduto"] = "13933139"
+					}
                 };
 
                 model.Save();
