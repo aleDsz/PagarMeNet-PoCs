@@ -54,6 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\PoCTransactionSplitRules.cs" />
     <Compile Include="PoCFactory.cs" />
     <Compile Include="PoCModel.cs" />
     <Compile Include="Entities\PoCTransactionBoleto.cs" />
