@@ -25,20 +25,29 @@ namespace PagarMePoCs.Net.Entities
         {
             try
             {
+				Recipient Recipient = new Recipient()
+				{
+					BankAccount = PagarMeService.GetDefaultService ().BankAccounts.Find (14815682),
+					TransferDay = 5,
+					TransferEnabled = true,
+					TransferInterval = TransferInterval.Weekly
+				};
+				Recipient.Save ();
+
                 model = new Transaction()
                 {
                     Amount = 3100,
                     PaymentMethod = PaymentMethod.CreditCard,
                     CardNumber = "4242424242424242",
-                    CardHolderName = "Richard",
+					CardHolderName = "PagarMe",
                     CardExpirationDate = "0921",
                     CardCvv = "123",
                     Customer = new Customer()
                     {
-                        Name = "Richard",
+						Name = "Teste PagarMe",
                         DocumentNumber = "43591017833",
                         DocumentType = DocumentType.Cpf,
-                        Email = "richard@pagar.me",
+                        Email = "teste@pagar.me",
                         Address = new Address()
                         {
                             Zipcode = "13223030",
@@ -53,25 +62,11 @@ namespace PagarMePoCs.Net.Entities
                         }
                     },
                     PostbackUrl = "http://www.aledsz.com.br/validateRequest.php",
-                    SplitRules = new SplitRule[]
+                    SplitRules = new []
                     {
                         new SplitRule()
                         {
-                            Recipient = new Recipient()
-                            {
-                                BankAccount = new BankAccount()
-                                {
-                                    Conta = "12345",
-                                    ContaDv = "0",
-                                    Agencia = "1234",
-                                    AgenciaDv = "5",
-                                    DocumentNumber = "43591017833",
-                                    LegalName = "Richard",
-                                    ChargeTransferFees = true,
-                                    DocumentType = DocumentType.Cpf,
-                                    BankCode = "341"
-                                }
-                            },
+                            Recipient = Recipient,
                             ChargeProcessingFee = true,
                             Liable = true,
                             Percentage = 100
@@ -80,7 +75,6 @@ namespace PagarMePoCs.Net.Entities
                 };
 
                 model.Save();
-                model.Capture(3100);
             }
             catch (PagarMeException ex)
             {

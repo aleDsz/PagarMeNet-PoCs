@@ -30,15 +30,15 @@ namespace PagarMePoCs.Net.Entities
                     Amount = 3100,
                     PaymentMethod = PaymentMethod.CreditCard,
                     CardNumber = "4242424242424242",
-                    CardHolderName = "Richard",
+					CardHolderName = "Teste PagarMe",
                     CardExpirationDate = "0921",
                     CardCvv = "123",
                     Customer = new Customer()
                     {
-                        Name = "Richard",
+                        Name = "Teste PagarMe",
                         DocumentNumber = "43591017833",
                         DocumentType = DocumentType.Cpf,
-                        Email = "richard@pagar.me",
+                        Email = "teste@pagar.me",
                         Address = new Address()
                         {
                             Zipcode = "13223030",

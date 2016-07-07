@@ -31,10 +31,10 @@ namespace PagarMePoCs.Net.Entities
                     PaymentMethod = PaymentMethod.Boleto,
                     Customer = new Customer()
                     {
-                        Name = "Richard",
+						Name = "Teste PagarMe",
                         DocumentNumber = "43591017833",
                         DocumentType = DocumentType.Cpf,
-                        Email = "richard@pagar.me",
+                        Email = "teste@pagar.me",
                         Address = new Address()
                         {
                             Zipcode = "13223030",
