@@ -10,16 +10,16 @@ using PagarMePoCs.Net.Interfaces;
 
 namespace PagarMePoCs.Net.Entities
 {
-	public class PoCTransactionCreditCard : IPoC
+	public class PoCTransactionRefusedCreditCard : IPoC
 	{
 		Transaction model;
 
-		public PoCTransactionCreditCard ()
+		public PoCTransactionRefusedCreditCard ()
 		{
 		}
 
 		public String Title
-        { get { return "Criar Transaction Credit Card"; } }
+        { get { return "Criar Transaction Refused Credit Card"; } }
 
 		public void Create ()
 		{
@@ -30,7 +30,7 @@ namespace PagarMePoCs.Net.Entities
 					CardNumber = "4242424242424242",
 					CardHolderName = "Teste PagarMe",
 					CardExpirationDate = "0921",
-					CardCvv = "123",
+					CardCvv = "651",
 					Customer = new Customer () {
 						Name = "Teste PagarMe",
 						DocumentNumber = "43591017833",

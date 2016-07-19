@@ -1,12 +1,6 @@
 ﻿<Properties StartupItem="PagarMe.Net.PoCs/PagarMePoCs.Net.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="PagarMe.Net.PoCs/Program.cs">
-    <Files>
-      <File FileName="PagarMe.Net.PoCs/Program.cs" Line="74" Column="31" />
-      <File FileName="PagarMe.Net.PoCs/Entities/PoCTransactionCreditCard.cs" Line="1" Column="1" />
-      <File FileName="PagarMe.Net.PoCs/Entities/PoCAllTransactions.cs" Line="12" Column="2" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
